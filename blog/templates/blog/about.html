@@ -1,10 +1,12 @@
 
 {% extends 'blog/base.html' %}
-
+{% load static %}
 
 {% block content %}
 
-<h1>Welcome About</h1>
+<h1>About JustThoughts</h1>
+<img src="{% static 'blog/just_thoughts_logo.png' %}">
+<p><h4>JustThoughs help to share and read thoughts of people around you.</h4></p>
 
-{% endblock content %}
+{% endblock %}
 
