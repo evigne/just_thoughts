@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JustThoughts</title>
+</head>
+<body>
+<h1>Welcome Home</h1>
+
+{% for post in posts %}
+{{ post.author }}
+{{ post.title }} on {{ post.date }}
+{% endfor %}
+
+</body>
+</html>
