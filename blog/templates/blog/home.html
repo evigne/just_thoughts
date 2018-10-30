@@ -1,6 +1,9 @@
 {% extends 'blog/base.html' %}
 
+
 {% block content %}
+
+{% if user.is_authenticated %}
 
 {% for post in posts %}
 <article class="media content-section">
@@ -16,4 +19,7 @@
 </article>
 
 {% endfor %}
+{% else %}
+<h1>Login In</h1>
+{% endif %}
 {% endblock %}
