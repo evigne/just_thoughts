@@ -1,4 +1,5 @@
 {% extends 'blog/base.html' %}
+{% load static %}
 
 
 {% block content %}
@@ -7,6 +8,7 @@
 
 {% for post in posts %}
 <article class="media content-section">
+  <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
   <div class="media-body">
     <div class="article-metadata">
       <a class="mr-2" href="#">{{ post.author }}</a>
@@ -20,6 +22,8 @@
 
 {% endfor %}
 {% else %}
-<h1>Login In</h1>
+<h1>JustThoughts</h1>
+<img src="{% static 'blog/just_thoughts_logo.png' %}">
+<p><h4><a href="{% url 'users_login' %}">Login</a> To View Posts </h4></p>
 {% endif %}
 {% endblock %}
