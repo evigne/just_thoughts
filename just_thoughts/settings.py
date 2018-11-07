@@ -123,6 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media') #this is where uploaded files will be saved
+
 MEDIA_URL = '/media/' #this where we access out media files in the browser
 
 
